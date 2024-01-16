@@ -23,9 +23,11 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v2.7.0
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           repository: skerdishehaj/random-number-generator
           tags: ${{ github.run_number }}
+        env:
+          DOCKER_BUILDKIT: 1
