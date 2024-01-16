@@ -1,4 +1,4 @@
-FROM openjdk:17-alpine
+FROM eclipse-temurin:19-alpine
 
 RUN mkdir -p /var/logs
 VOLUME /var/logs

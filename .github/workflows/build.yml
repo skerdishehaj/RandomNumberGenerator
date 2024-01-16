@@ -29,5 +29,3 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           repository: skerdishehaj/random-number-generator
           tags: ${{ github.run_number }}
-        env:
-          DOCKER_BUILDKIT: 1
