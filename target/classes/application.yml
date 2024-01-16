@@ -1,6 +1,6 @@
 logging:
   level:
     com.randomnumbergenerator.RandomNumberGenerator: DEBUG
+    root: INFO
   file:
     name: '/var/logs/random-number-generator.log'
-
