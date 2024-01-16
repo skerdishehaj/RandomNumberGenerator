@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dk
+  labels:
+    app: dk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dk
+  template:
+    metadata:
+      labels:
+        app: dk
+    spec:
+      containers:
+        - name: dk
+          image: skerdishehaj/randomnumbergenerator:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+# kubectl apply -f app-deployment.yaml
